@@ -1,0 +1,23 @@
+﻿ <HTML>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<H1>Моя веб-страница</H1>
+<TEXTAREA ID = "mytext" ROWS = 8 COLS = 25></TEXTAREA>
+<SCRIPT>
+var mystr = "Привет! Это эффект пишущей машинки"
+var astr = mystr.split("") 
+var typestr = ""
+var i = 0
+var xinterval = setInterval("wrtext()",100) 
+function wrtext()
+{ 
+if (i<astr.length)
+{
+typestr+=astr[i] 
+document.all.mytext.value=typestr 
+i++
+}
+else
+clearInterval(xinterval) 
+}
+</SCRIPT>
+</HTML>
